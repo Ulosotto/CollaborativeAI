@@ -105,7 +105,7 @@ const Dialogue = ({ isLoading, setIsLoading, theme, isDisabled, messages, setMes
 
   return (
     <div className="dialogue-wrapper">
-      <h2>Your joint poem</h2>
+      <h2>Your joint short story</h2>
       <div className="dialogue">
         <div className="dialogue-content" ref={messagesRef}>
           {messages
@@ -130,7 +130,7 @@ const Dialogue = ({ isLoading, setIsLoading, theme, isDisabled, messages, setMes
           Thank you. Here is our final poem. Please click "Rate task" to rate it!
         </span>
         }
-        <div className="form-wrapper">
+{/*         {<div className="form-wrapper">
           <form onSubmit={handleSubmit} className="input-form">
             <input 
               value={newLine}
@@ -144,7 +144,7 @@ const Dialogue = ({ isLoading, setIsLoading, theme, isDisabled, messages, setMes
               Add
             </button>
           </form>
-        </div>
+        </div>} */}
       </div>
     </div>
   );

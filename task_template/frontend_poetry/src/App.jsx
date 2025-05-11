@@ -36,7 +36,7 @@ const App = () => {
       <Header />
       <TaskDescription />
       <SurveyButton />
-      <TutorialPopUp />
+{/*       <TutorialPopUp /> */}
       <ThemeForm theme={theme} setTheme={setTheme} isDisabled={isDisabled} setIsDisabled={setIsDisabled} setIsLoading={setIsLoading} addMessage={addMessage}/>
       <div className="main-interaction">
         <Dialogue isLoading={isLoading} setIsLoading={setIsLoading} theme={theme} isDisabled={isDisabled} messages={messages} setMessages={setMessages} addMessage={addMessage} />

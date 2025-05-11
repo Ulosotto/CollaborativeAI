@@ -80,7 +80,7 @@ const ThemeForm = ({ theme, setTheme, isDisabled, setIsDisabled, setIsLoading, a
           <input 
             type="text" 
             disabled={isDisabled}
-            placeholder="Set a theme for the poem"
+            placeholder="Set a theme for the story"
             value={theme}
             onChange={(event) => setTheme(event.target.value)}
           />
