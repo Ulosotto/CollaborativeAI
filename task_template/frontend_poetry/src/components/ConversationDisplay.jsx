@@ -11,12 +11,12 @@ const ConversationDisplay = ({ isLoading, setIsLoading, theme, isDisabled, messa
   const messagesRef = useRef(null);
 
   //Check if the length of the text has reached the line limit yet
-  useEffect(() => {
+  /* useEffect(() => {
     setIsLengthReached(messages.filter(msg => msg.text !== "" && msg.text !== null).length === lengthLimit)
     if (messagesRef.current) {
       messagesRef.current.scrollTop = messagesRef.current.scrollHeight;
     }    
-  }, [messages])
+  }, [messages]) */
   
   function parsePoetryAndComment(input) {
     // Initialize variables to store the parsed parts

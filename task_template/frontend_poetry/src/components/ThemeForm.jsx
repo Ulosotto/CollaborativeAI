@@ -59,7 +59,7 @@ const ThemeForm = ({ theme, setTheme, isDisabled, setIsDisabled, setIsLoading, a
           comment: true,
           poem: []
         },
-        text: "Write the first line of the poem",
+        text: "Write the first 10 line draft of the short story",
         objective: theme
       })
       .then((returnedResponse) => {

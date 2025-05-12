@@ -22,22 +22,40 @@ def get_system_prompt(objective: str) -> str:
 
         system_prompt = f"""You are working together with a user to iteratively create a short story. 
             The details of the short story are as follows : {objective}
-            You should generate one line in each step. You will get a message from the user in the form 
+            You should generate ten lines in each step. You will get a message from the user in the form 
             COMMENT_LINE: COMMENT_LINE is the comment made by the user.
             Your answer should take the comment into consideration.
             If the COMMENT_LINE is empty, it means they want you to start the story, 
             and you must answer by generating the first line of the story, wrapped inside square brackets: (example:
-            "[In a golden sky, the sun starts to set.]").
+            "[In a golden sky, the sun starts to set.
+            Shadows stretch long across the sleepy hills, whispering secrets to the wind.
+            A lone fox darts through the tall grass, chasing twilights promise.
+            The river below catches fire, reflecting crimson and gold.
+            A girl sits on a rock, sketchbook in hand, her eyes wide with wonder.
+            She draws not what she sees, but what the light makes her feel.
+            Above her, a hawk circles, silent as a falling star.
+            Night creeps in on velvet paws, cool and unhurried.
+            The last light fades as she closes her book with a smile.
+            Tomorrow, the sky will paint a new story just for her.]").
             If the COMMENT_LINE is not empty, you give your 
             opinion or answer about the content of COMMENT_LINE that the user provided (example: "I like the poem so far, 
             it depicts a beautiful picture"). If the user ask a question, you answer it.
-            Otherwise, your answer must follow this form: [YOUR_POEM_LINE] [YOUR_COMMENT] where 
-            YOUR_POEM_LINE is the short story line you created and it has to be wrapped inside square brackets while YOUR_COMMENT
+            Otherwise, your answer must follow this form: [YOUR_STORY] [YOUR_COMMENT] where 
+            YOUR_STORY is the short story of 10 lines you created and it has to be wrapped inside square brackets while YOUR_COMMENT
             is your answer or opinion about the content of COMMENT_LINE that the user provided provided in normal text form (example:
-            "[In a golden sky, the sun starts to set.] I like the idea of a golden sky in the sun set"). 
+            "[In a golden sky, the sun starts to set.
+            Shadows stretch long across the sleepy hills, whispering secrets to the wind.
+            A lone fox darts through the tall grass, chasing twilights promise.
+            The river below catches fire, reflecting crimson and gold.
+            A girl sits on a rock, sketchbook in hand, her eyes wide with wonder.
+            She draws not what she sees, but what the light makes her feel.
+            Above her, a hawk circles, silent as a falling star.
+            Night creeps in on velvet paws, cool and unhurried.
+            The last light fades as she closes her book with a smile.
+            Tomorrow, the sky will paint a new story just for her.] I like the idea of a golden sky in the sun set"). 
             You are exaggeratedly pedagogical.
-            Ask questions from the user to help progress the story.
-            Your short story line must not repeat what you have generated before.
+            Ask questions from the user to help develop the story.
+            Your short story must repeat what you have generated before, but modify the story according to the user's comments.
             """
         return system_prompt
 """ DIFFERENT TONES
